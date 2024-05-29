@@ -8,9 +8,12 @@ import Allroutes from "./AllRoutes/Allroutes";
 function App() {
   return (
     <div className="flex h-screen">
+      
+      <div className="hidden md:block md:mr-24">
       <Sidebar />
-      <div className="flex flex-col flex-1  p-4">
-        <div className="flex-1 overflow-auto">
+      </div>
+      <div className="flex flex-col w-full">
+        <div className="overflow-auto flex-1 p-4">
           <Allroutes />
         </div>
       </div>
