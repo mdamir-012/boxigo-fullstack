@@ -11,7 +11,7 @@ import {
 import { IoCheckbox } from 'react-icons/io5';
 import InventoryDetailsItem from './InventoryDetailsItem';
 
-const MyMovesItem = ({ movingItemDetails, inventoryItemsData }) => {
+const MyMovesItem = ({ movingItemDetails, inventoryItemsData,categoryData }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => setIsExpanded(!isExpanded);
@@ -51,7 +51,7 @@ const MyMovesItem = ({ movingItemDetails, inventoryItemsData }) => {
         </div>
         <div className="estimate-id-container ml-4">
           <h1 className="text-lg font-bold">Request#</h1>
-          <p className="text-gray-600">{estimateId}</p>
+          <p className="text-orange-500 font-semibold">{estimateId}</p>
         </div>
       </div>
 
@@ -72,7 +72,7 @@ const MyMovesItem = ({ movingItemDetails, inventoryItemsData }) => {
           <BsCalendar2CheckFill className="text-xl text-gray-600 mr-2" />
           <p className="text-gray-600">{movingOn}</p>
           <BsPen className="ml-2 text-gray-600" />
-          <IoCheckbox className="ml-2 text-gray-600" />
+          <IoCheckbox className="ml-2 text-orange-400" />
           <p className="ml-2 text-gray-600">is flexible</p>
         </div>
       </div>
@@ -80,7 +80,7 @@ const MyMovesItem = ({ movingItemDetails, inventoryItemsData }) => {
       <div className="flex space-x-4 mb-4">
         <button
           type="button"
-          className="view-move-details-btn bg-blue-500 text-white px-4 py-2 rounded"
+          className="view-move-details-btn bg-orange-500 hover:bg-orange-700 text-white px-4 py-2 rounded"
           onClick={toggleExpand}
         >
           View move details
@@ -92,16 +92,16 @@ const MyMovesItem = ({ movingItemDetails, inventoryItemsData }) => {
 
       {isExpanded && (
         <div>
-          <div className="additional-information-container mb-4">
+          <div className=" flex justify-between additional-information-container mb-4">
             <h1 className="text-lg font-bold">Additional Information</h1>
-            <button type="button" className="ml-4 text-blue-500">Edit Additional Info</button>
+            <button type="button" className="ml-4  bg-black text-white p-2 rounded-sm">Edit Additional Info</button>
           </div>
           <p className="text-gray-600 mb-4">{oldHouseAdditionalInfo}</p>
           <p className="text-gray-600 mb-4">{newHouseAdditionalInfo}</p>
 
-          <div className="additional-information-container mb-4">
+          <div className="flex justify-between additional-information-container mb-4">
             <h1 className="text-lg font-bold">House Details</h1>
-            <button type="button" className="ml-4 text-blue-500">Edit House Details</button>
+            <button type="button" className="ml-4 text-white bg-black p-2 rounded-sm">Edit House Details</button>
           </div>
           <h1 className="existing-house-details-item-heading text-orange-500 font-bold mb-2">Existing House Details</h1>
           <div className="existing-house-details-container grid grid-cols-3 gap-4 mb-4">
@@ -135,14 +135,15 @@ const MyMovesItem = ({ movingItemDetails, inventoryItemsData }) => {
             </div>
           </div>
 
-          <div className="additional-information-container mb-4">
+          <div className="flex justify-between additional-information-container mb-4">
             <h1 className="text-lg font-bold">Inventory Details</h1>
-            <button type="button" className="ml-4 text-blue-500">Edit Inventory</button>
+            <button type="button" className="ml-4 text-white bg-black p-2 rounded-sm">Edit Inventory</button>
           </div>
           <ul className="inventory-item-details-list-container">
             {inventoryItemsData?.map((each) => (
               <InventoryDetailsItem
                 inventoryItemDetails={each}
+                categoryData={categoryData}
                 key={each.id}
               />
             ))}

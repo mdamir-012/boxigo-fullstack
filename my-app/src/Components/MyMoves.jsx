@@ -3,13 +3,16 @@ import MyMovesItem from './MyMovesItem';
 
 const MyMoves = () => {
     const [movesData,setMovesData]=useState([]);
+    const [loading, setLoading]=useState(false)
 
   const handleFetchData=async()=>{
+    setLoading(true)
     try{
       let response=await fetch("http://test.api.boxigo.in/sample-data/");
       let data=await response.json();
       console.log(data.Customer_Estimate_Flow)
       setMovesData(data.Customer_Estimate_Flow)
+      setLoading(false)
 
     }
     catch(err){
@@ -23,11 +26,13 @@ const MyMoves = () => {
     handleFetchData()
   },[])
 
+  
+
   return (
-    <div className="container mx-auto p-4">
+    <div className="container ml-auto p-4 w-[80%]">
     
       <h1 className="text-2xl font-bold mb-4">My Moves</h1>
-      <ul>
+      {loading? <h1>Loading...</h1>:<ul>
          {movesData.map((move) => (
           <MyMovesItem
             key={move.estimate_id}
@@ -49,10 +54,12 @@ const MyMoves = () => {
               newParkingDistance: move.new_parking_distance,
               oldParkingDistance: move.old_parking_distance,
             }}
-            inventoryItemsData={move.inventory}
+            inventoryItemsData={move.items.inventory}
+            categoryData={move.items.category}
           />
         ))} 
-      </ul>
+      </ul> }
+      
     </div>
   );
 };
