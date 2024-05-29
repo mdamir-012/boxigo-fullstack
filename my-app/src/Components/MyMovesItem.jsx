@@ -173,8 +173,10 @@ const MyMovesItem = ({
             {inventoryItemsData?.map((each) => (
               <InventoryDetailsItem
                 inventoryItemDetails={each}
-                categoryData={categoryData}
+                // categoryData={categoryData}
                 key={each.id}
+
+                categoryData={each.category?.map((elem) => elem)}
               />
             ))}
           </ul>
