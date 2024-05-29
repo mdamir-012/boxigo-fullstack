@@ -1,0 +1,17 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import MyMovesItem from "../Components/MyMovesItem";
+import MyProfile from "../Components/MyProfile";
+import MyMoves from "../Components/MyMoves";
+
+const Allroutes = () => {
+  return (
+    <Routes>
+    <Route path="/mymoves" element={<MyMoves/>}/>
+      <Route path="/mymovesitem" element={<MyMovesItem/>}/>
+      <Route path="/myprofile" element={<MyProfile/>}/>
+    </Routes>
+  );
+};
+
+export default Allroutes;
