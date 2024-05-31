@@ -9,6 +9,7 @@ const Allroutes = () => {
   return (
     <>
       <Routes>
+      <Route path="/" element={<MyMoves/>}/>
         <Route path="/mymoves" element={<MyMoves />} />
         <Route path="/mymovesitem" element={<MyMovesItem />} />
         <Route path="/myprofile" element={<MyProfile />} />

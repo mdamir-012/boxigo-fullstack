@@ -15,7 +15,7 @@ This repository contains a React application that consumes the Boxigo API to gen
 
 ## Live Link
 
-![Live Link](https://boxigo-app-sepia.vercel.app/)
+[Live Link](https://boxigo-app-sepia.vercel.app/)
 
 ## Demo
 

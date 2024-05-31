@@ -25,10 +25,10 @@ const MyMoves = () => {
   }, []);
 
   return (
-    <div className="container ml-auto p-4 w-[80%]">
+    <div className=" ml-auto p-4 w-[80%] mr-8 ">
       <h1 className="text-2xl font-bold mb-4">My Moves</h1>
       {loading ? (
-        <h1>Loading...</h1>
+        <img src="https://www.poolparty.biz/wp-content/plugins/custom-pp-chatgpt/img/loader.gif" alt="" />
       ) : (
         <ul>
           {movesData.map((move) => (

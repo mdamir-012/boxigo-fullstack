@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs";
 import { IoCheckbox } from "react-icons/io5";
 import InventoryDetailsItem from "./InventoryDetailsItem";
+import { BiSolidError } from "react-icons/bi";
 
 const MyMovesItem = ({
   movingItemDetails,
@@ -40,51 +41,51 @@ const MyMovesItem = ({
   } = movingItemDetails;
 
   return (
-    <li className="my-moves-list-item p-4 bg-white shadow-md rounded-md mb-4">
-      <div className="from-to-address-container mb-4">
+    <li className="sticky md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4 md:ml-4">
+      <div className="from-to-address-container mb-4 flex">
         <div className="from-address-container">
           <h1 className="text-lg font-bold">From</h1>
           <p className="text-gray-600">{movingFrom}</p>
         </div>
         <div className="next-arrow-container mx-4">
-          <HiOutlineArrowNarrowRight className="text-xl text-gray-600" />
+          <HiOutlineArrowNarrowRight className="text-2xl text-orange-600 " />
         </div>
         <div className="to-address-container">
           <h1 className="text-lg font-bold">To</h1>
           <p className="text-gray-600">{movingTo}</p>
         </div>
         <div className="estimate-id-container ml-4">
-          <h1 className="text-lg font-bold">Request#</h1>
+          <h1 className="text-xl antialiased font-extrabold">Request#</h1>
           <p className="text-orange-500 font-semibold">{estimateId}</p>
         </div>
       </div>
 
-      <div className="moving-details-container grid grid-cols-3 gap-4 mb-4">
+      <div className="moving-details-container grid grid-cols-3 gap-4 mb-4 pb-6">
         <div className="moving-details-item-container flex items-center">
-          <AiFillHome className="text-xl text-gray-600 mr-2" />
+          <AiFillHome className="text-xl text-orange-600 mr-2" />
           <p className="text-gray-600">{propertySize}</p>
         </div>
         <div className="moving-details-item-container flex items-center">
-          <FaBoxes className="text-xl text-gray-600 mr-2" />
+          <FaBoxes className="text-xl text-orange-600 mr-2" />
           <p className="text-gray-600">{totalItems}</p>
         </div>
         <div className="moving-details-item-container flex items-center">
-          <GiPathDistance className="text-xl text-gray-600 mr-2" />
+          <GiPathDistance className="text-xl text-orange-600 mr-2" />
           <p className="text-gray-600">{distance}</p>
         </div>
         <div className="moving-details-item-container flex items-center">
-          <BsCalendar2CheckFill className="text-xl text-gray-600 mr-2" />
+          <BsCalendar2CheckFill className="text-xl text-orange-600 mr-2" />
           <p className="text-gray-600">{movingOn}</p>
           <BsPen className="ml-2 text-gray-600" />
-          <IoCheckbox className="ml-2 text-orange-400" />
+          <IoCheckbox className="ml-2 text-orange-600" />
           <p className="ml-2 text-gray-600">is flexible</p>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4">
+      <div className="flex flex-col  md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4">
         <button
           type="button"
-          className="view-move-details-btn border-2 border-red-400 text-red-400 bg-white hover:bg-orange-700 hover:text-white  px-4 py-2 rounded"
+          className="view-move-details-btn border-2 border-red-400 text-red-400 bg-white hover:bg-orange-700  hover:text-white  px-4 py-2 rounded"
           onClick={toggleExpand}
         >
           View move details
@@ -95,6 +96,11 @@ const MyMovesItem = ({
         >
           {customStatus}
         </button>
+      </div>
+
+      <div className="flex items-center gap-2 py-4">
+      <span className="text-orange-600"><BiSolidError /></span>
+        <span className=""><strong>Disclaimer</strong>: Please update your move dates before two days of shifting</span>
       </div>
 
       {isExpanded && (
@@ -182,7 +188,7 @@ const MyMovesItem = ({
           </ul>
         </div>
       )}
-      <hr className="border-gray-200 mt-4" />
+      <hr className="border-gray-300 mt-4" />
     </li>
   );
 };
