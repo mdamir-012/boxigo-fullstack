@@ -84,7 +84,7 @@ const MyMovesItem = ({
       <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4">
         <button
           type="button"
-          className="view-move-details-btn bg-orange-500 hover:bg-orange-700 text-white px-4 py-2 rounded"
+          className="view-move-details-btn border-2 border-red-400 text-red-400 bg-white hover:bg-orange-700 hover:text-white  px-4 py-2 rounded"
           onClick={toggleExpand}
         >
           View move details

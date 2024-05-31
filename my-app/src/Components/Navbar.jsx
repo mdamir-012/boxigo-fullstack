@@ -1,22 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
 
 const Navbar = () => {
-    const links=[
-        {title:"My Moves",Path:"/mymoves"},
-        {title:"My Profile",Path:"myprofile"}
-    ]
 
   return (
-    <div>
-    <div className='flex justify-evenly bg-orange-800 text-white text-2xl h-12'>
-    {links.map((elem)=>(
-        <Link to={elem.Path}>{elem.title}</Link>
-    ))}
-    </div>
-      
-    </div>
-  )
-}
+    <nav className="bg-red-400 p-4 sticky top-0 z-50">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-white text-2xl font-bold">
+          Boxigo
+        </div>
+        <div className=" space-x-10 mr-10">
+          <a href="#home" className="text-white hover:text-gray-300 text-xl ">Home</a>
+          <a href="#about" className="text-white hover:text-gray-300 text-xl">About</a>
+          <a href="#contact" className="text-white hover:text-gray-300 text-xl">Contact</a>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
