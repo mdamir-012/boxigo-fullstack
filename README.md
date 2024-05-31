@@ -1,7 +1,5 @@
 # boxigo-fullstack
 
-# Boxigo React Assignment
-
 This repository contains a React application that consumes the Boxigo API to generate a user interface. The application fetches data from the API and displays it in an interactive format, allowing users to expand and collapse details as needed.
 
 <br>
