@@ -33,6 +33,23 @@ This repository contains a React application that consumes the Boxigo API to gen
 - **Data Fetching**: Fetches data from the backend API and displays it in the frontend.
 
 ## Screenshots
+Large Screen:
+![Screenshot (736)](https://github.com/mdamir-012/boxigo-fullstack/assets/128631499/305d7bcf-eb3c-48ad-a09e-e53d09df0241)
+
+<br>
+
+Medium Screen:
+![Screenshot (737)](https://github.com/mdamir-012/boxigo-fullstack/assets/128631499/02e04177-234d-484b-98ff-370fb782dbdc)
+
+<br>
+
+Small Screen:
+
+![Screenshot (739)](https://github.com/mdamir-012/boxigo-fullstack/assets/128631499/291882f0-a4fd-4ed5-95d8-3c45f8427672)
+
+
+
+
 
 ## Installation
 
