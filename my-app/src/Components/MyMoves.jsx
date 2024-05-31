@@ -8,7 +8,7 @@ const MyMoves = () => {
   const handleFetchData = async () => {
     try {
       setLoading(true);
-      let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sample-data/`);
+      let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}`);
       let data = await response.json();
       console.log(data.Customer_Estimate_Flow);
       setMovesData(data.Customer_Estimate_Flow);
