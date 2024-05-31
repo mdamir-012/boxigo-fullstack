@@ -19,7 +19,7 @@ This repository contains a React application that consumes the Boxigo API to gen
 
 ## Demo
 
-![Demo Video](https://drive.google.com/file/d/1zysK3_oFSmcTnqy9KoJpOBPmTUgcZ3ty/view?usp=sharing)
+[Demo Video](https://drive.google.com/file/d/1zysK3_oFSmcTnqy9KoJpOBPmTUgcZ3ty/view?usp=sharing)
 
 ## Features
 
