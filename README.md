@@ -11,9 +11,12 @@ This repository contains a React application that consumes the Boxigo API to gen
 - Flexbox
 - Responsive Design
 
-## Live Link
+- **Backend**: Express, Node.js
 
-[Live Link](https://boxigo-app-sepia.vercel.app/)
+## Deployment Link
+
+- Frontend: [Live Link](https://boxigo-app-sepia.vercel.app/)
+- Backend: [boxigo Link](https://boxigo-backend-nine.vercel.app/api/sample-data)
 
 ## Demo
 
@@ -25,6 +28,11 @@ This repository contains a React application that consumes the Boxigo API to gen
 - Displays data in a user-friendly format
 - Expandable and collapsible sections for detailed views
 - Responsive design
+- **Dynamic Routing**: Uses React Router for dynamic navigation.
+
+- **Data Fetching**: Fetches data from the backend API and displays it in the frontend.
+
+## Screenshots
 
 ## Installation
 
