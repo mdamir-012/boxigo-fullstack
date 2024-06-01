@@ -8,7 +8,7 @@ import MyMoves from "./MyMoves";
 
 const Sidebar = () => {
   return (
-    <div className="bg-red-500 fixed mt-16  top-0 left-0 bottom-0 md:w-64 sm:w-20 w-full md:h-full md:px-4 py-2 overflow-y-auto ">
+    <div className="bg-red-500 fixed mt-16  top-0 left-0 bottom-0 lg:w-56 sm:w-[20%] md:w-[50%]w-full md:h-full md:px-4 py-2 overflow-y-auto ">
       <ul className="mt-3 text-white font-bold">
         <li className="mb-2 rounded hover:shadow hover:bg-gray-500 py-2">
           <Link to={"/mymoves"} className="px-3 flex items-center">

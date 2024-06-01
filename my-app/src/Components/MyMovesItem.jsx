@@ -41,7 +41,7 @@ const MyMovesItem = ({
   } = movingItemDetails;
 
   return (
-    <li className="sticky md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4 md:ml-4">
+    <li className="sticky md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4 ">
       <div className="from-to-address-container mb-4 flex">
         <div className="from-address-container">
           <h1 className="text-lg font-bold">From</h1>
@@ -85,14 +85,14 @@ const MyMovesItem = ({
       <div className="flex flex-col  md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4">
         <button
           type="button"
-          className="view-move-details-btn border-2 border-red-400 text-red-400 bg-white hover:bg-orange-700  hover:text-white  px-4 py-2 rounded"
+          className="view-move-details-btn border-2 border-red-400 text-red-400 bg-white hover:bg-orange-600 hover:border-transparent  hover:text-white  px-4 py-2 rounded"
           onClick={toggleExpand}
         >
           View move details
         </button>
         <button
           type="button"
-          className="quotes-btn bg-green-500 text-white px-4 py-2 rounded"
+          className="quotes-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-green-500"
         >
           {customStatus}
         </button>

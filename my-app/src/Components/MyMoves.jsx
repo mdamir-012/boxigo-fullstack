@@ -25,7 +25,7 @@ const MyMoves = () => {
   }, []);
 
   return (
-    <div className=" ml-auto p-4 w-[80%] mr-8 ">
+    <div className=" container mx-auto p-4 w-full sm:w-[90%] md:w-[80%]  ">
       <h1 className="text-2xl font-bold mb-4">My Moves</h1>
       {loading ? (
         <img src="https://www.poolparty.biz/wp-content/plugins/custom-pp-chatgpt/img/loader.gif" alt="" />
